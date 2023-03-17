@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name">Adfar Rasheed</h1>
+    <button onclick="myfunc()">Remove Name</button>
+    <ul id="skill">
+        <li>HTML</li>
+        <li>css</li>
+        <li>js</li>
+    </ul>
+    <button onclick="myfun()">Remove Skill</button>
+    <ul>
+        <li>React</li>
+        <li id="del">Nodejs</li>
+        <li>Express</li>
+    </ul>
+    <button onclick="myfunction()">Remove One Skill</button>
+
+    <script>
+        /*-- const heading = document.createElement("h1")
+        heading.innerHTML ="Hello Adfar"
+        document.body.appendChild(heading) */
+        function myfunction(){
+            const ele = document.getElementById("del")
+            console.log(ele);
+            ele.parentNode.removeChild(ele)
+        }
+        function myfunc(){
+            let element= document.getElementById("name")
+            console.log(element);
+            element.remove()
+        }
+        function myfun(){
+            const skillelm = document.getElementById("skill")
+            console.log(skillelm);
+            skillelm.removeChild(skillelm.firstElementChild)
+        }
+    </script>
+</body>
+</html>
